@@ -1283,7 +1283,7 @@ pre {
     .table-responsive-md > .table-bordered {
       border: 0; } }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200.98px) {
   .table-responsive-lg {
     display: block;
     width: 100%;
@@ -3201,7 +3201,7 @@ input[type="button"].btn-block {
     .navbar-expand-md .navbar-toggler {
       display: none; } }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200.98px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
@@ -8580,7 +8580,7 @@ fieldset[disabled]
   min-width: 450px;
   border-radius: 0.4285rem; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .dropdown-toggle:after {
     display: inline-block;
     width: 0;
@@ -8628,7 +8628,7 @@ fieldset[disabled]
     clear: both;
     content: " "; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .footer {
     padding-left: 0px; }
     .footer .copyright {
@@ -9616,7 +9616,7 @@ img {
     vertical-align: middle;
     font-size: 20px; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .navbar .container-fluid {
     padding-right: 15px;
     padding-left: 15px; }
@@ -9914,7 +9914,7 @@ img {
     padding-right: 0.5rem;
     padding-left: 0.5rem; } }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1080px) {
   .navbar[class*='navbar-toggleable-'] .container {
     margin-left: 0;
     margin-right: 0; }
@@ -10952,7 +10952,7 @@ hr {
 .sidebar-wrapper {
   -webkit-overflow-scrolling: touch; }
 
-@media (min-width: 991px) {
+@media (min-width: 1200px) {
   .sidebar,
   .main-panel,
   .sidebar-wrapper {
@@ -11054,7 +11054,7 @@ hr {
 .panel-header-lg {
   height: 380px; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .sidebar {
     position: fixed;
     display: block;
@@ -11075,18 +11075,18 @@ hr {
     -o-transform: translate3d(-260px, 0, 0);
     -ms-transform: translate3d(-260px, 0, 0);
     transform: translate3d(-260px, 0, 0); } }
-  @media screen and (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  @media screen and (max-width: 1200px) and (prefers-reduced-motion: reduce) {
     .sidebar {
       transition: none; } }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .wrapper {
     transition: 0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1); } }
-  @media screen and (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  @media screen and (max-width: 1200px) and (prefers-reduced-motion: reduce) {
     .wrapper {
       transition: none; } }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .main-panel {
     width: 100%; }
     .main-panel .content {
@@ -11105,11 +11105,11 @@ hr {
     -o-transform: translate3d(0px, 0, 0);
     -ms-transform: translate3d(0px, 0, 0);
     transform: translate3d(0px, 0, 0); } }
-  @media screen and (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  @media screen and (max-width: 1200px) and (prefers-reduced-motion: reduce) {
     .nav-open .sidebar {
       transition: none; } }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
     .nav-open .sidebar:before {
       content: unset; }
   .nav-open body {
@@ -11154,11 +11154,11 @@ hr {
     overflow-x: hidden;
     background-color: transparent;
     transition: 0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1); } }
-  @media screen and (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  @media screen and (max-width: 1200px) and (prefers-reduced-motion: reduce) {
     #bodyClick {
       transition: none; } }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .navbar .dropdown-menu {
     position: static !important; } }
 
@@ -11340,7 +11340,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 code {
   color: #f3a4b5; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .profile-photo .profile-photo-small {
     margin-left: -2px; }
   .button-dropdown {
@@ -11460,7 +11460,7 @@ code {
   margin-right: auto;
   left: 10px; }
 
-@media (min-width: 991px) {
+@media (min-width: 1200px) {
   .rtl.sidebar-mini .main-panel .content {
     padding-right: 130px;
     padding-left: 50px; }
@@ -11470,7 +11470,7 @@ code {
   .rtl .navbar-minimize button {
     margin-right: -5px; } }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .rtl .sidebar {
     margin-right: 0; }
   .rtl .main-panel .content {

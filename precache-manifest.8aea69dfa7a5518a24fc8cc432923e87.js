@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "82af226642f1e138f3f8b9dc32112708",
+    "revision": "8ebc630f3a0143e0058c2427457b1120",
     "url": "/dra/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dra/static/css/2.2562d4f0.chunk.css"
   },
   {
-    "revision": "d2a07062435f91411642",
+    "revision": "9026b94c3461818b0674",
     "url": "/dra/static/css/main.28307e1b.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dra/static/js/2.98452c61.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d2a07062435f91411642",
-    "url": "/dra/static/js/main.161c695a.chunk.js"
+    "revision": "9026b94c3461818b0674",
+    "url": "/dra/static/js/main.c1a5c9d3.chunk.js"
   },
   {
     "revision": "dc192b57bfed2afd6be1ea5558f17255",
-    "url": "/dra/static/js/main.161c695a.chunk.js.LICENSE.txt"
+    "url": "/dra/static/js/main.c1a5c9d3.chunk.js.LICENSE.txt"
   },
   {
     "revision": "8ac1caf77d72819f7214",

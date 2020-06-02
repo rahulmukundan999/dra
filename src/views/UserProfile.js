@@ -34,7 +34,7 @@ class UserProfile extends React.Component {
     super(props);
     this.state = {
       file: {},
-      result: undefined,
+      result: [],
       image: '',
       loading: false,
       bigChartData: "data1"
@@ -52,23 +52,57 @@ class UserProfile extends React.Component {
 
 
   fileSelectHandler(event) {
-    event.persist()
+    console.log('event');
+    event.persist();
+    if (!event || event.target.files.length == 0) {
+      this.setState({ image: '', file: {} });
+      return null;
+    }
     console.log('file', event);
     this.setState({ file: event.target.files[0] }, () => {
       console.log(this.state.file)
       this.fileChange(event);
     })
   }
+  //hh
 
   scanImage() {
-    console.log('image', this.state.file)
     this.setState({ loading: true })
-    setTimeout(() => {
-      this.setState({ result: this.state.file, loading: false })
-    }, 4000)
+
+    let formData = new FormData();
+    formData.append("file", this.state.file);
+
+    fetch(`http://51.132.136.240:5000/api/statistics`, {
+      method: 'POST',
+      body: formData
+    })
+      .then((response) => { console.log('res', response); return response.json() })
+      .then((data) => {
+        console.log('result', data)
+        if (data && data.status == 200) {
+          let temp = [];
+          for (let index in data.data.value) {
+            temp.push(`${index} : ${parseInt(data.data.value[index]).toFixed(2)}%`)
+          }
+          this.setState({ result: temp, loading: false });
+        } else {
+          this.setState({ result: {}, loading: false });
+        }
+      })
+      .catch(error => { console.log('error', error); this.setState({ error, loading: false }) });
+
+
+    // console.log('image', this.state.file)
+    // setTimeout(() => {
+    //   this.setState({ result: this.state.file, loading: false })
+    // }, 4000)
   }
 
   fileChange(event) {
+    if (!event || !event.target.files) {
+      this.setState({ image: '', file: {} });
+      return null;
+    }
     let file = event.target.files[0];
     let reader = new FileReader();
     reader.readAsDataURL(file);
@@ -87,7 +121,7 @@ class UserProfile extends React.Component {
     document.getElementById("selectImage").click()
   }
   render() {
-    if (!this.state.result) {
+    if (!this.state.result || this.state.result.length == 0) {
       return (
         <>
           <div className="content">
@@ -316,16 +350,23 @@ class UserProfile extends React.Component {
                 <h5 className="title">Result</h5>
               </CardHeader>
               <CardBody>
-                Cardiology : 50%
-                <br></br>
-                Edema : 100%
-                </CardBody>
+                {this.state.result.map(value => (
+                  <div style={{ color: 'white' }}>
+                    {value}
+                  </div>
+                ))}
+
+                <div align="end">
+                  <Button className="btn-fill" color="secondary" type="submit" onClick={() => this.setState({ file: {}, result: undefined })}>
+                    Scan Again
+                  </Button>
+                </div>
+              </CardBody>
             </Card>
           </Col>
         </Row>
         <br></br>
-        <Row>
-          {/* <Col lg="4"> */}
+        {/* <Row>
           <Card className="card-chart">
             <CardHeader>
               <h5 className="card-category">Total Cases</h5>
@@ -343,8 +384,7 @@ class UserProfile extends React.Component {
               </div>
             </CardBody>
           </Card>
-          {/* </Col> */}
-        </Row>
+        </Row> */}
       </div>
     }
   }
